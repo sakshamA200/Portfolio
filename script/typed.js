@@ -1,6 +1,8 @@
-  var typed = new Typed('.typed_js', {
-            strings: ['Frontend Developer'],
-            typeSpeed: 50,
-            loop: true,
-            backSpeed: 40,
-        });
+var typed = new Typed('#typed-js', {
+    strings: ["Frontend Developer!", "Lyricist!"],
+typeSpeed: 90,
+backSpeed: 55,
+loop: true,
+cursorChar: "|",
+showCursor: true
+});

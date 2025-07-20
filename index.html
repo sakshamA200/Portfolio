@@ -1,52 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Responsive</title>
+    <title>Saksham Zalpuri - Frontend Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+
 </head>
 
 <body>
-    <nav id="navbar">
-        <div class="heading_nav">
-            <a href="#home">Portfolio</a>
-        </div>
-
-        <div class="nav-links" id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </div>
-
-        <div class="right_nav">
-            <a href="resume.pdf" download="resume.pdf" class="rsmDwn">
-              Resume 
-            </a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header>
+        <nav id="navbar">
+            <div class="heading_nav">
+                <a href="#home">Saksham.</a>
             </div>
-        </div>
-    </nav>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#home">About</a>
+                <a href="#skill">Skills</a>
+                <a href="#projects">Projects</a>
+            </div>
+            <div class="right-nav">
+                <!-- <a href="resume.pdf" download="resume.pdf" class="rsmDwn">
+                    Resume
+                </a> -->
+                <a href="" class="git">
+                    Github Profile
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <section id="home">
         <div class="container">
             <div class="left_section">
-                <p>Hi, My name is <span class="purple">Saksham Zalpuri</span> <br> and I'm a passionate <span class="purple">Frontend Developer.</span> <span>I love to explore new technologies and continuously improve my skills.</span>
-
+                <p class="intro-name">Hi, I am</p>
+                <p class="intro-name">Saksham Zalpuri</p>
+                <p class="typ-info">I am a <span id="typed-js" class="typed-text"></span></p>
+                <p class="intro-para">I love playing around with new tech and finding better ways to build cool things.
+                    Learning and improving is just part of the fun for me — whether it’s fixing bugs or figuring out how
+                    something works behind the scenes.
+                </p>
             </div>
             <div class="right_section">
                 <img src="./assets/images/2896028.webp" alt="Developer illustration">
             </div>
+
         </div>
     </section>
 
+    <div class="clip-curve-skill-top"></div>
+
+    <section id="sk">
+        <div class="skills">
+            <h2>Skills.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="skills-container">
+                <div class="skills-section">
+                    <h3>Frontend</h3>
+                    <div class="skills-item">
+                        <div class="skills-items"><img src="assets/icons/svg/html.svg" alt=""> HTMl</div>
+                        <div class="skills-items"><img src="assets/icons/svg/css.svg" alt=""> CSS</div>
+                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Javascript</div>
+                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Tailwind CSS</div>
+                    </div>
+                </div>
+                <div class="skills-section">
+                    <h3>Frontend</h3>
+                    <div class="skills-item">
+                        <div class="skills-items"><img src="assets/icons/svg/html.svg" alt=""> HTMl</div>
+                        <div class="skills-items"><img src="assets/icons/svg/css.svg" alt=""> CSS</div>
+                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Javascript</div>
+                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Tailwind CSS</div>
+                    </div>
+                </div>
+                <div class="skills-section">
+                    <h3>Frontend</h3>
+                    <div class="skills-item">
+                        <div class="skills-items"><img src="assets/icons/svg/html.svg" alt=""> HTMl</div>
+                        <div class="skills-items"><img src="assets/icons/svg/css.svg" alt=""> CSS</div>
+                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Javascript</div>
+                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Tailwind CSS</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    
+    <div class="clip-curve-skill-bottom"></div>
     <section id="projects">
-        <h2 class="section-title">Watch my artwork</h2>
+        <h2>Projects.</h2>
         <div class="projects-content">
             <a target="_blank" href="https://sakshama200.github.io/multi_step_register_fom/" class="project-item">
                 <div id="sliding-div"></div>
@@ -86,7 +139,7 @@
         <div class="footer-content">
             <p>© 2024 Portfolio. All rights reserved.</p>
             <div class="social-links">
-                <a target="_blank"href="https://github.com/sakshamA200" target="_blank">
+                <a target="_blank" href="https://github.com/sakshamA200" target="_blank">
                     <img src="./assets/icons/svg/github-dark.svg" alt="GitHub">
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/in/saksham-zalpuri-73b71b2bb/">
@@ -98,25 +151,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    <script>
-        // Mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // Close menu when clicking on links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="script/main.js"></script>
+    <script src="script/typed.js"></script>
 </body>
 
 </html>

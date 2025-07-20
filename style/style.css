@@ -12,10 +12,19 @@ body {
     width: 100%;
     min-height: 100%;
     font-family: "Poppins", sans-serif;
-    background-color: #111111;
+    background-color: rgb(0, 0, 33);
     color: #ffffff;
     overflow-x: hidden;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 15;
+    position: fixed;
+    background-color: rgb(0, 0, 33);
 }
 
 /* Navigation */
@@ -25,28 +34,22 @@ body {
     align-items: center;
     height: 80px;
     width: 100%;
-    padding: 0 40px;
-    position: fixed;
+    max-width: 1200px;
+    margin: 0 auto;
     backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .heading_nav a {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 700;
+    font-size: clamp(1.2rem, 4vw, 1.45rem);
+    font-weight: 600;
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.heading_nav a:hover {
-    color: #2d47e7;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
     gap: 2rem;
 }
@@ -55,7 +58,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     transition: color 0.3s ease;
     position: relative;
 }
@@ -79,31 +82,30 @@ body {
     width: 100%;
 }
 
-.right_nav {
+.nav {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.rsmDwn {
+.git {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     text-decoration: none;
-    color: #fff;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #2d47e7;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 500;
-    background: linear-gradient(135deg, #3cd0f3, #2d47e7);
-    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 24px);
+    padding: 10px 20px;
+    border: 1px solid #2d47e7;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
+    transition: all 0.5s ease-in-out;
 }
 
-.rsmDwn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(60, 208, 243, 0.3);
+.git:hover {
+    background-color: #2d47e7;
+    color: #fff;
 }
 
 .download-icon {
@@ -141,76 +143,190 @@ body {
 
 /* Hero Section */
 #home {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    background-color: rgb(0, 0, 33)
 }
 
 #home .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
 .left_section {
     width: 100%;
-    max-width: 700px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
-.left_section p {
-    font-size: clamp(1.8rem, 5vw, 2.3rem);
-    line-height: 1.2;
-    margin: 0;
+.intro-name {
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(242, 243, 244);
+    line-height: 68px;
 }
 
+.typ-info,
+.typed-js {
+    font-weight: 600;
+    font-size: 32px;
+    color: rgb(242, 243, 244);
+    line-height: 68px;
+}
 
-.purple,
-.typed_js {
+.typed-text {
     color: #2d47e7;
-    background: linear-gradient(135deg, #2d47e7, #3cd0f3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+}
+
+#typed-js {
+    color: #2d47e7;
+}
+
+.intro-para {
+    font-size: 20px;
+    line-height: 32px;
+    /* margin-bottom: 42px; */
+    color: rgba(242, 243, 244, 0.584);
 }
 
 .right_section {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .right_section img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1.5px solid #2d47e7;
+    object-fit: cover;
+}
+
+.clip-curve-skill-top {
+    height: 100px;
+    clip-path: polygon(65% 40%, 0% 100%, 100% 100%);
+    background-color: rgb(0, 0, 45);
+}
+
+/*  */
+#sk {
+    background-color: rgb(0, 0, 45);
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.skills-container {
     width: 100%;
-    height: auto;
-    max-width: 600px;
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skills-section {
+    width: 100%;
+    max-width: 500px;
+    background: #111618;
+    border: 0.1px solid #2d47e7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 25px 45px;
+
+}
+
+.skills-section h3 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(177, 178, 179);
+    margin-bottom: 20px;
+}
+
+.skills-item {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.skills-items {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(242, 243, 244, 0.5);
+    border: 1px solid rgba(242, 243, 244, 0.5);
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.skills h2 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.clip-curve-skill-bottom {
+    height: 100px;
+    clip-path: polygon(35% 80%, 0 0, 100% 0);
+    background-color: rgb(0, 0, 45);
 }
 
 /* Projects Section */
+
 #projects {
-    min-height: 80vh;
-    background-color: #222222;
+    padding: 20px 30px;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.section-title {
+#projects>h2 {
     color: #fff;
     text-align: center;
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 6vw, 2.5rem);
     font-weight: 500;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, #fff, #3cd0f3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
@@ -382,10 +498,16 @@ body {
         display: flex;
     }
 
+    .right-nav {
+        display: flex;
+        align-items: center;
+    }
+
     #home .container {
         flex-direction: column;
         text-align: center;
     }
+
     .right_section img {
         max-width: 500px;
     }
