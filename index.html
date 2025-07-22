@@ -4,157 +4,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saksham Zalpuri - Frontend Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <title>Saksham - Frontend Developer</title>
     <link rel="stylesheet" href="style/style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav id="navbar">
-            <div class="heading_nav">
-                <a href="#home">Saksham.</a>
-            </div>
 
-            <div class="nav-links" id="nav-links">
-                <a href="#home">About</a>
-                <a href="#skill">Skills</a>
-                <a href="#projects">Projects</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Saksham.</div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
             </div>
-            <div class="right-nav">
-                <!-- <a href="resume.pdf" download="resume.pdf" class="rsmDwn">
-                    Resume
-                </a> -->
-                <a href="" class="git">
-                    Github Profile
-                </a>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero" id="about">
+            <div class="container">
+                <h1 class="hero-title">Saksham Zalpuri</h1>
+                <p class="hero-subtitle">Frontend Developer</p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>sakshamZalpuri200@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pune, India</span>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
 
-    <section id="home">
-        <div class="container">
-            <div class="left_section">
-                <p class="intro-name">Hi, I am</p>
-                <p class="intro-name">Saksham Zalpuri</p>
-                <p class="typ-info">I am a <span id="typed-js" class="typed-text"></span></p>
-                <p class="intro-para">I love playing around with new tech and finding better ways to build cool things.
-                    Learning and improving is just part of the fun for me — whether it’s fixing bugs or figuring out how
-                    something works behind the scenes.
+                <p class="hero-description">
+                    A goal-oriented software developer with experience in building web applications using modern
+                    technologies like React, Next.js, and more. Seeking to leverage my technical skills to deliver
+                    exceptional user experiences.
                 </p>
-            </div>
-            <div class="right_section">
-                <img src="./assets/images/2896028.webp" alt="Developer illustration">
-            </div>
 
-        </div>
-    </section>
-
-    <div class="clip-curve-skill-top"></div>
-
-    <section id="sk">
-        <div class="skills">
-            <h2>Skills.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <div class="skills-container">
-                <div class="skills-section">
-                    <h3>Frontend</h3>
-                    <div class="skills-item">
-                        <div class="skills-items"><img src="assets/icons/svg/html.svg" alt=""> HTMl</div>
-                        <div class="skills-items"><img src="assets/icons/svg/css.svg" alt=""> CSS</div>
-                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Javascript</div>
-                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Tailwind CSS</div>
-                    </div>
-                </div>
-                <div class="skills-section">
-                    <h3>Frontend</h3>
-                    <div class="skills-item">
-                        <div class="skills-items"><img src="assets/icons/svg/html.svg" alt=""> HTMl</div>
-                        <div class="skills-items"><img src="assets/icons/svg/css.svg" alt=""> CSS</div>
-                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Javascript</div>
-                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Tailwind CSS</div>
-                    </div>
-                </div>
-                <div class="skills-section">
-                    <h3>Frontend</h3>
-                    <div class="skills-item">
-                        <div class="skills-items"><img src="assets/icons/svg/html.svg" alt=""> HTMl</div>
-                        <div class="skills-items"><img src="assets/icons/svg/css.svg" alt=""> CSS</div>
-                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Javascript</div>
-                        <div class="skills-items"><img src="assets/icons/svg/javascript.svg" alt=""> Tailwind CSS</div>
+                <div class="hero-actions">
+                    <a class="resume-btn" href="resume.pdf" download>
+                        <i class="fas fa-download"></i>
+                        Resume
+                    </a>
+                    <div class="social-links">
+                        <a href="https://github.com/sakshamA200" target="_blank" class="social-link" title="Github"><i
+                                class="ri-github-fill"></i></a>
+                        <a href="#" class="social-link" title="Email"><i class="ri-mail-line"></i></a>
+                        <a href="https://x.com/sakshamA200" target="_blank" class="social-link" title="Twitter"><i
+                                class="ri-twitter-x-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/saksham-zalpuri-73b71b2bb/" target="_blank"
+                            class="social-link" title="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-para">Technologies and tools I've worked with throughout my projects and experience
+                </p>
 
-        </div>
-    </section>
-    
-    <div class="clip-curve-skill-bottom"></div>
-    <section id="projects">
-        <h2>Projects.</h2>
-        <div class="projects-content">
-            <a target="_blank" href="https://sakshama200.github.io/multi_step_register_fom/" class="project-item">
-                <div id="sliding-div"></div>
-                <h4>01</h4>
-                <h5>Multi Step Form</h5>
-                <h6>2025</h6>
-            </a>
-            <a href="#" class="project-item">
-                <div id="sliding-div"></div>
-                <h4>02</h4>
-                <h5>Task Management App</h5>
-                <h6>2024</h6>
-            </a>
-            <a href="#" class="project-item">
-                <div id="sliding-div"></div>
-                <h4>03</h4>
-                <h5>Weather Dashboard</h5>
-                <h6>2023</h6>
-            </a>
-            <a href="#" class="project-item">
-                <div id="sliding-div"></div>
-                <h4>04</h4>
-                <h5>Portfolio Website</h5>
-                <h6>2023</h6>
-            </a>
-            <a href="#" class="project-item">
-                <div id="sliding-div"></div>
-                <h4>05</h4>
-                <h5>Chat Application</h5>
-                <h6>2023</h6>
-            </a>
-            <div class="project-border"></div>
-        </div>
-    </section>
+                <div class="skill-category">
+                    <h3>Front End</h3>
+                    <div class="skill-icons">
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="assets/icons/svg/skills/html.svg" alt="HTMl">
+                            </div>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="assets/icons/svg/skills/css.svg" alt="CSS">
+                            </div>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="assets/icons/svg/skills/javascript.svg" alt="JavaScript">
+                            </div>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <img src="assets/icons/svg/skills/tailwind-css.svg" alt="Tailwind">
+                            </div>
+                            <p>Tailwind</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <div class="skill-icons">
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <img src="assets/icons/svg/skills/git.svg" alt="HTMl">
+                                </div>
+                                <p>Git</p>
+                            </div>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <img src="assets/icons/svg/skills/github.svg" alt="CSS">
+                                </div>
+                                <p>Github</p>
+                            </div>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <img src="assets/icons/svg/skills/vscode.svg" alt="JavaScript">
+                                </div>
+                                <p>VS Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/Proj/weather.png" alt="Weather app">
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather App</h3>
+                            <p>A dynamic weather dashboard that displays real-time weather information based on user
+                                location or search input using mock API data and interactive UI.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">OpenWeather API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://sakshama200.github.io/weather-app/" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/Proj/multistep-form.png" alt="Login form">
+                        </div>
+                        <div class="project-content">
+                            <h3>Multi-Step Form</h3>
+                            <p>A step-by-step registration form with smooth transitions and real-time input validation,
+                                guiding users through multiple sections for a seamless signup experience.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://sakshama200.github.io/multi_step_register_fom/" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+
+                <div class="contact-content">
+                    <div class="contact-info-section">
+                        <h3>Let's work together</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if
+                            you'd like to collaborate!</p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <i class="fas fa-envelope"></i>
+                                <span>saksham.zalpuri200@gmail.com</span>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Pune, India</span>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 6006214973</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>© 2024 Portfolio. All rights reserved.</p>
-            <div class="social-links">
-                <a target="_blank" href="https://github.com/sakshamA200" target="_blank">
-                    <img src="./assets/icons/svg/github-dark.svg" alt="GitHub">
-                </a>
-                <a target="_blank" href="https://www.linkedin.com/in/saksham-zalpuri-73b71b2bb/">
-                    <img src="./assets/icons/svg/linkedin.svg" alt="LinkedIn">
-                </a>
-                <a target="_blank" href="https://x.com/sakshamA200">
-                    <img src="./assets/icons/svg/twitter.svg" alt="Twitter">
-                </a>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Saksham Zalpuri. All rights reserved.</p>
+
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    <script src="script/main.js"></script>
     <script src="script/typed.js"></script>
+    <script src="script/main.js"></script>
 </body>
 
 </html>
