@@ -53,7 +53,6 @@ const contactForm = document.querySelector(".contact-form")
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault()
 
-  // Get form data
   const formData = new FormData(contactForm)
   const name = formData.get("name")
   const email = formData.get("email")
@@ -96,34 +95,19 @@ const observer = new IntersectionObserver((entries) => {
   })
 }, observerOptions)
 
-// Observe elements for animation
-document.querySelectorAll(".experience-item, .education-item, .project-card, .skill-category").forEach((el) => {
-  el.style.opacity = "0"
-  el.style.transform = "translateY(30px)"
-  el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
-  observer.observe(el)
-})
 
-// Resume download functionality
-document.querySelector(".resume-btn").addEventListener("click", () => {
-  // In a real implementation, this would download the actual resume file
-  alert("Resume download would start here. Please add your actual resume file.")
-})
 
 // Add typing effect to hero title
-function typeWriter(element, text, speed = 100) {
-  let i = 0
-  element.innerHTML = ""
-
-  function type() {
+function typeWriter(element, text, speed ) {
+  let i = 0;
+  element.innerHTML = "";
+  const interval = setInterval(() => {
     if (i < text.length) {
-      element.innerHTML += text.charAt(i)
-      i++
-      setTimeout(type, speed)
+      element.innerHTML += text.charAt(i++);
+    } else {
+      clearInterval(interval);
     }
-  }
-
-  type()
+  }, speed);
 }
 
 // Initialize typing effect when page loads
